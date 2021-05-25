@@ -26,7 +26,7 @@ void UserTcpConnect::readyRead()
     QByteArray data = soket->readAll();
     QJsonDocument doc = QJsonDocument::fromJson(data);
     answer = doc.object();
-    qDebug() << answer;
+    qDebug() <<"invoke slot UserTcpConnect::readyRead: "<< answer;
 }
 
 void UserTcpConnect::sendToServer(QJsonDocument json)
@@ -47,7 +47,8 @@ QJsonObject UserTcpConnect::resiveFromServer()
 {
     if(soket->waitForReadyRead(5000))
     {
-        QMutexLocker ml(&mut);
+        QMutexLocker ml(&mut);// убрать мьютексы, перед уборкой продебажить
+        qDebug() <<"invoke method UserTcpConnect::resiveFromServer: "<< answer;
         return answer;
     }
     else
