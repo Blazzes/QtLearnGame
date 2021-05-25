@@ -2,32 +2,28 @@
 
 UserAccount::UserAccount(QString login, QString password, QString email)
 {
-    userAccountData.login = login;
-    userAccountData.password = password;
-    userAccountData.email = email;
+    this->login = login;
+    this->password = password;
+    this->email = email;
 }
 
-UserAccount::UserAccount(UserData UserAccountData) : userAccountData(UserAccountData) {}
+
 
 QString UserAccount::getLogin() const
 {
-    return userAccountData.login;
+    return login;
 }
 
 QString UserAccount::getPassword() const
 {
-    return userAccountData.password;
+    return password;
 }
 
 QString UserAccount::getEmail() const
 {
-    return userAccountData.email;
+    return email;
 }
 
-UserData UserAccount::getUsxerData() const
-{
-    return userAccountData;
-}
 
 QJsonDocument UserAccount::getUserAccountFromJsonDocument() const
 {

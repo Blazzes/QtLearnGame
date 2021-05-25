@@ -5,27 +5,23 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 
-typedef struct
-{
-    QString login;
-    QString password;
-    QString email;
-} UserData;
+
 
 class UserAccount : public QObject
 {
     Q_OBJECT
 public:
     UserAccount(QString login, QString password, QString email);
-    UserAccount(UserData UserAccountData);
+
     QString getLogin() const;
     QString getPassword() const;
     QString getEmail() const;
-    UserData getUsxerData() const;
     QJsonDocument getUserAccountFromJsonDocument() const;
     QJsonObject getUserAccountFromJsonObject() const;
 private:
-    UserData userAccountData;
+    QString login;
+    QString password;
+    QString email;
 };
 
 #endif // USERACCOUNT_H
