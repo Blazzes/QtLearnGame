@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameMenu</class>
+ <widget class="QDialog" name="GameMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>558</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="playB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Играть</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

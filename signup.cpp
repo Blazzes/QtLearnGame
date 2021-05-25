@@ -11,7 +11,8 @@ SignUp::SignUp(UserAccount *account, UserTcpConnect *server, QWidget *parent) :
     connect(ui->backMenu, &QPushButton::clicked, [&]{
         close();
     });
-    connect(ui->regB, &QPushButton::clicked, [&]{
+    connect(ui->regB, &QPushButton::clicked, [&]{ // &Servie, sendAccountToServer()
+
         if(service.isLogin(ui->nameText->text()) &&
            service.isPassword(ui->passwordText->text()) &&
            service.isMail(ui->mailText->text()) &&
